@@ -1,0 +1,23 @@
+{% extends 'customer/customerbase.html' %}
+{% block content %}
+
+<br><br>
+
+<h2 align="center">Policy Categories</h2>
+
+<table border="1" align="center">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+    </tr>
+
+    {% for c in categories %}
+    <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.category_name }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock content %}
